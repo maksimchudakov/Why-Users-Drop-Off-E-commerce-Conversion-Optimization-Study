@@ -1,60 +1,105 @@
-A/B Test Analysis — Conversion Rate Optimization
-📊 Project Context
-In a professional data analytics environment, running an A/B test is only valuable when the statistical methodology is sound and the results are actionable. This project implements a complete end-to-end A/B testing pipeline to analyse conversion rate performance across control and variant groups, covering everything from raw data cleaning to executive-ready business recommendations.
-The goal was to determine whether a product change produced a statistically and practically significant improvement — using industry-standard hypothesis testing methods: Python → PostgreSQL → Statistical Analysis → Business Recommendations.
+## 📌 Project Overview
 
-🛠 Tech Stack
+A multi-dimensional A/B test analysis conducted on an e-commerce platform to evaluate whether a **redesigned landing page** drives higher conversion rates compared to the existing design.
 
-Language: Python (Pandas, SciPy, NumPy, Matplotlib, Seaborn)
-Environment: Jupyter Notebook
-Statistical Methods: Two-proportion Z-test, Confidence Intervals, Cohen's h, Power Analysis
+Rather than stopping at aggregate results, this study applies **segmentation analysis** across user behavioral dimensions — uncovering a critical insight that top-level metrics completely missed: the new design **actively harms conversion rates among returning users**, putting an estimated **$548,332 in annual revenue at risk.**
 
+---
 
-🚀 Key Technical Achievements
+## 🎯 Business Question
 
-Data Cleaning Pipeline: Resolved missing values, outliers, and group imbalance issues to ensure test validity before any statistical analysis.
-Hypothesis Testing Framework: Applied a two-proportion Z-test at α = 0.05 with pre-calculated sample sizes to maintain 80% statistical power throughout.
-Effect Size Validation: Computed Cohen's h alongside p-values to distinguish statistically significant results from practically meaningful ones — a critical distinction in high-traffic A/B environments.
-Segmentation Analysis: Broke results down by user subgroups to identify where the variant performed strongest, enabling targeted rollout recommendations.
+> *"Does the new landing page design statistically improve conversion rates — and does this hold across all user segments?"*
 
+---
 
-🛡️ Key Analytical Deliverables
-1. Hypothesis Test & Result
+## 📊 Key Findings
 
-Null Hypothesis (H₀): The variant produces no difference in conversion rate vs. control.
-Test Used: Two-proportion Z-test (two-tailed), α = 0.05
-Outcome: [Insert your p-value and decision — e.g. "Rejected H₀ at p = 0.02"]
-95% Confidence Interval: [Insert your CI — e.g. "+1.1% to +4.9% conversion lift"]
+| Dimension | Result |
+|---|---|
+| Dataset Size | 290,584 clean user sessions |
+| Aggregate Result | ❌ Not significant (p = 0.19) |
+| New User Segment | ❌ Not significant (p = 0.74) |
+| Returning User Segment | ✅ Significant negative effect (p = 0.028) |
+| Conversion Impact | -0.37% drop for returning users |
+| Annual Revenue at Risk | $548,332 |
 
-2. Effect Size & Practical Significance
+---
 
-Cohen's h: [Insert value] — interpreted as a small/medium/large effect
-Key principle applied: statistical significance ≠ practical significance. Every result was cross-validated against effect size before any recommendation was made.
+## 🔍 The Core Insight
 
-3. Segmentation Analysis
+The aggregate A/B test returned an **inconclusive result** — suggesting no meaningful difference between the two pages. However, segmentation analysis revealed a critical divergence:
 
-Identified which user segments drove the strongest lift, informing a targeted rather than blanket rollout strategy.
+- **New Users** — No significant impact from the new design
+- **Returning Users** — Statistically significant **conversion rate decline** of 0.37%
 
-4. Business Recommendations
+This is a classic example of how **top-level metrics can mask opposing segment-level effects** — and why segmentation is essential before any deployment decision.
 
-Translated statistical output into a clear ship/no-ship decision with supporting rationale for both technical and non-technical stakeholders.
+---
 
+## 💡 Final Recommendation
 
-📁 Repository Structure
+> **Do not launch the new landing page globally.** Implement a segmented experience — preserve the current page for returning users and conduct qualitative research to understand friction points before the next experiment iteration.
 
-ab_test_analysis.ipynb — Main Jupyter Notebook containing all 6 analysis phases
-data/ — Raw and cleaned datasets
-README.md — Project documentation
+---
 
+## 🛠 Tech Stack
 
-⚙️ How to Run
+| Layer | Tools |
+|---|---|
+| Data Processing | Python, Pandas, NumPy |
+| Statistical Testing | SciPy, Statsmodels |
+| Visualization | Matplotlib, Seaborn |
+| Business Dashboard | Tableau Public |
 
-Clone the repo and place the dataset in the data/ folder
-Install dependencies: pip install -r requirements.txt
-Launch: jupyter notebook ab_test_analysis.ipynb
+---
 
+## 📂 Project Structure
+Why-Users-Drop-Off-E-commerce-Conversion-Optimization-Study/
+│
+├── ab_analysis.ipynb          # Main analysis notebook
+├── data/
+│   └── ab_data.csv            # Raw dataset
+├── visuals/
+│   ├── eda_overview.png
+│   ├── hypothesis_testing.png
+│   ├── segmentation_analysis.png
+│   └── executive_dashboard.png
+└── README.md
 
-📊 Concepts Demonstrated
-Null & alternative hypothesis formulation · Z-score and p-value interpretation · Confidence interval construction · Cohen's h effect size · Statistical power analysis · Segment-level A/B testing · Communicating findings to non-technical stakeholders
+---
 
-Developed as a portfolio project to demonstrate end-to-end A/B testing methodology and applied statistical reasoning in a business context.
+## 📋 Analytical Framework
+
+| Phase | Description |
+|---|---|
+| Phase 1 | Data Ingestion & Preliminary Validation |
+| Phase 2 | Data Cleaning & Integrity Audit |
+| Phase 3 | Exploratory Data Analysis (EDA) |
+| Phase 4 | Hypothesis Testing & Statistical Analysis |
+| Phase 5 | Segmentation Analysis |
+| Phase 6 | Business Recommendations & Revenue Impact |
+
+## 🧪 Statistical Methods Applied
+
+- ✅ Two-Proportion Z-Test
+- ✅ Chi-Square Test of Independence
+- ✅ Cohen's h Effect Size
+- ✅ Statistical Power Analysis
+- ✅ Multi-Segment Subgroup Analysis
+- ✅ Revenue Impact Modeling
+
+---
+
+## 📁 Dataset
+
+**Source:** [A/B Testing Dataset — Kaggle](https://www.kaggle.com/datasets/zhangluyuan/ab-testing)
+
+| Field | Description |
+|---|---|
+| user_id | Unique user identifier |
+| timestamp | Session timestamp |
+| group | Control or Treatment assignment |
+| landing_page | Old or new page served |
+| converted | Binary conversion outcome (0/1) |
+
+---
