@@ -14,7 +14,7 @@ Rather than stopping at aggregate results, this study applies **segmentation ana
 ## 📊 Interactive Dashboard
 🔗 [View Live Tableau Dashboard](https://public.tableau.com/app/profile/maksim.chudakov2280/vizzes)
 ## 🖼 Dashboard Preview
-![Dashboard Preview](visuals/executive_dashboard.png)
+![Dashboard Preview](visuals/executive_Tableau_dashboard.png)
 
 ## 📊 Key Findings
 
