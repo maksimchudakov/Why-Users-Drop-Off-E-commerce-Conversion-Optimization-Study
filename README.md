@@ -69,7 +69,8 @@ ecommerce-ab-test-analysis/
 │   ├── eda_overview.png
 │   ├── hypothesis_testing.png
 │   ├── segmentation_analysis.png
-│   └── executive_dashboard.png
+│   ├── executive_dashboard.png
+│   └── executive_Tableau_dashboard.png
 └── README.md
 ```
 ---
