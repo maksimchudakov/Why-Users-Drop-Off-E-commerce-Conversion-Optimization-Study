@@ -58,19 +58,20 @@ This is a classic example of how **top-level metrics can mask opposing segment-l
 ---
 
 ## 📂 Project Structure
-Ecommerce-ab-test-analysis/
+```
+ecommerce-ab-test-analysis/
 │
-├── ab_analysis.ipynb          # Main analysis notebook
+├── ab_analysis.ipynb              # Main analysis notebook
+├── ab_test_dashboard.twbx         # Tableau packaged workbook
 ├── data/
-│   └── ab_data.csv            # Raw dataset
+│   └── ab_data.csv                # Raw dataset
 ├── visuals/
 │   ├── eda_overview.png
 │   ├── hypothesis_testing.png
 │   ├── segmentation_analysis.png
 │   └── executive_dashboard.png
-├── ab_test_dashboard.twbx
 └── README.md
-
+```
 ---
 
 ## 📋 Analytical Framework
