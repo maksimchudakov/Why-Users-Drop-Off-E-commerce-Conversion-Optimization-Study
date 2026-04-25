@@ -58,7 +58,7 @@ This is a classic example of how **top-level metrics can mask opposing segment-l
 ---
 
 ## 📂 Project Structure
-Why-Users-Drop-Off-E-commerce-Conversion-Optimization-Study/
+Ecommerce-ab-test-analysis/
 │
 ├── ab_analysis.ipynb          # Main analysis notebook
 ├── data/
@@ -68,6 +68,7 @@ Why-Users-Drop-Off-E-commerce-Conversion-Optimization-Study/
 │   ├── hypothesis_testing.png
 │   ├── segmentation_analysis.png
 │   └── executive_dashboard.png
+├── ab_test_dashboard.twbx
 └── README.md
 
 ---
