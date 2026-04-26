@@ -3,7 +3,7 @@
 A multi-dimensional A/B test analysis conducted on an e-commerce platform to evaluate whether a **redesigned landing page** drives higher conversion rates compared to the existing design.
 
 Rather than stopping at aggregate results, this study applies **segmentation analysis** across user behavioral dimensions — uncovering a critical insight that top-level metrics completely missed: the new design **actively harms conversion rates among returning users**, putting an estimated **$548,332 in annual revenue at risk.**
-
+123
 ---
 
 ## 🎯 Business Question
