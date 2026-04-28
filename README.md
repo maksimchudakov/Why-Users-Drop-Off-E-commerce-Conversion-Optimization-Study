@@ -28,7 +28,7 @@ Rather than stopping at aggregate results, this study applies **segmentation ana
 | Annual Revenue at Risk | $548,332 |
 
 ---
-123
+123213231
 ## 🔍 The Core Insight
 
 The aggregate A/B test returned an **inconclusive result** — suggesting no meaningful difference between the two pages. However, segmentation analysis revealed a critical divergence:
