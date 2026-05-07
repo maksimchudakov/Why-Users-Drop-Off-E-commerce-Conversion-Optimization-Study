@@ -110,4 +110,3 @@ ecommerce-ab-test-analysis/
 | converted | Binary conversion outcome (0/1) |
 
 ---
-123
